@@ -1,0 +1,62 @@
+.home {
+  text-align: center;
+  margin: 10em auto;
+  width: 100%;
+}
+
+.card {
+  width: 350px;
+  height: 400px;
+  background-color: burlywood;
+  font-size: 4em;
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+
+.card-face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background: burlywood;
+}
+
+.card-back {
+  background: blue;
+  transform: rotateY(180deg);
+}
+
+.flip {
+  animation: flipCard 0.275s forwards linear;
+}
+
+.unflip {
+  animation: unflipCard 0.275s forwards linear;
+  transform: rotateY(180deg);
+}
+
+@keyframes flipCard {
+  0% {
+    transform: rotateZ(0deg) rotateY(180deg);
+  }
+  50% {
+    transform: rotateZ(-10deg) rotateY(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg) rotateY(0deg);
+  }
+}
+@keyframes unflipCard {
+  0% {
+    transform: rotateZ(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: rotateZ(-10deg) rotateY(90deg);
+  }
+  100% {
+    transform: rotateZ(0deg) rotateY(180deg);
+  }
+}
