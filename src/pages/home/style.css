@@ -17,6 +17,11 @@ h1{
   text-align: center;
 }
 
+.footer{
+  margin-top: 3em;
+  text-align: center;
+}
+
 .card {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
