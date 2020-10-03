@@ -6,7 +6,7 @@ import { useState } from 'preact/hooks'
 const Home = () => {
   const [flipped, setFlipped] = useState(false)
 
-  const toggleFlip = (e) => setFlipped(!flipped)
+  const toggleFlip = () => setFlipped(!flipped)
 
   return (
     <div class="home">

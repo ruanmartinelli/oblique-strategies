@@ -5,15 +5,19 @@
 }
 
 .card {
-  width: 350px;
+  width: 320px;
   height: 400px;
-  background-color: burlywood;
   font-size: 4em;
   display: inline-block;
   transform-style: preserve-3d;
+  border-radius: 10px;
 }
 
 .card-face {
+  border-radius: 10px;
+  background: #fff;
+  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
   position: absolute;
   height: 100%;
   width: 100%;
@@ -25,7 +29,8 @@
 }
 
 .card-back {
-  background: blue;
+  background: lightskyblue;
+  color: white;
   transform: rotateY(180deg);
 }
 
