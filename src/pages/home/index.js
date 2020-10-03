@@ -8,7 +8,7 @@ const delay = (seconds) =>
   new Promise((resolve) => setTimeout(resolve, seconds * 1000))
 
 const Home = () => {
-  const initialStrategy = localStorage.getItem('strategy') ?? sample(strategies)
+  const initialStrategy = window.localStorage.getItem('strategy') ?? sample(strategies)
 
   const [flipped, setFlipped] = useState(true)
   const [strategy, setStrategy] = useState(initialStrategy)
@@ -17,7 +17,7 @@ const Home = () => {
 
   const updateStrategy = () => {
     const strategy = sample(strategies)
-    localStorage.setItem('strategy', strategy)
+    window.localStorage.setItem('strategy', strategy)
     setStrategy(strategy)
   }
 
@@ -43,7 +43,14 @@ const Home = () => {
       </div>
 
       <div class="footer">
-        <p class="text-muted"></p>
+        <p class="text-muted">
+          <a
+            class="text-muted"
+            href={`https://twitter.com/intent/tweet?text="${strategy}" %23obliquestrategies&url=https://obliquestrategies.ruanmartinelli.com`}
+          >
+            Tweet
+          </a>
+        </p>
       </div>
     </div>
   )

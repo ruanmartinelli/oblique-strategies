@@ -8,16 +8,16 @@
   flex-direction: column;
 }
 
-h1{
+h1 {
   letter-spacing: 1px;
 }
 
-.header{
+.header {
   margin-bottom: 3em;
   text-align: center;
 }
 
-.footer{
+.footer {
   margin-top: 3em;
   text-align: center;
 }
@@ -33,12 +33,12 @@ h1{
   border-radius: 10px;
 }
 
-@media (min-width: 480px) { 
-  .card{
+@media (min-width: 480px) {
+  .card {
     height: 250px;
     width: 420px;
   }
- }
+}
 
 .card-face {
   position: absolute;
