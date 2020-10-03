@@ -7,21 +7,24 @@
 .card {
   width: 320px;
   height: 400px;
-  font-size: 4em;
+  font-size: 1.5em;
   display: inline-block;
   transform-style: preserve-3d;
   border-radius: 10px;
 }
 
 .card-face {
-  border-radius: 10px;
-  background: #fff;
-  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
-  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
   position: absolute;
   height: 100%;
   width: 100%;
+  background: #fff;
   backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  padding: 0 35px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
 }
 
 .card-front {
