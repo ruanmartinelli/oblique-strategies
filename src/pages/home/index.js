@@ -1,26 +1,34 @@
 import './style.css'
 import { h } from 'preact'
-import strategies from '../../strategies'
 import sample from 'lodash.sample'
-
+import strategies from '../../strategies'
 import { useEffect, useState } from 'preact/hooks'
 
+const delay = (seconds) =>
+  new Promise((resolve) => setTimeout(resolve, seconds * 1000))
+
 const Home = () => {
-  const [flipped, setFlipped] = useState(false)
-  const [strategy, setStrategy] = useState(null)
-  const [counter, setCounter] = useState(10 * 60) // seconds
+  const initialStrategy = localStorage.getItem('strategy') ?? sample(strategies)
+
+  const [flipped, setFlipped] = useState(true)
+  const [strategy, setStrategy] = useState(initialStrategy)
 
   const toggleFlip = () => setFlipped(!flipped)
 
+  const updateStrategy = () => {
+    const strategy = sample(strategies)
+    localStorage.setItem('strategy', strategy)
+    setStrategy(strategy)
+  }
+
   useEffect(() => {
-    setStrategy(sample(strategies))
+    if (flipped) return
 
-    const interval = setInterval(() => {
-      setCounter((c) => c - 1)
-    }, 1000)
-
-    return () => clearInterval(interval)
-  }, [])
+    return async () => {
+      await delay(0.5)
+      updateStrategy()
+    }
+  }, [flipped])
 
   return (
     <div class="home">
@@ -31,11 +39,11 @@ const Home = () => {
 
       <div class={`card ${flipped ? 'flip' : 'unflip'}`} onClick={toggleFlip}>
         <div class="card-face card-front"></div>
-        <div class="card-face card-back">{strategy}.</div>
+        <div class="card-face card-back">{strategy}</div>
       </div>
 
       <div class="footer">
-        <p class="text-muted">New card in {counter} seconds.</p>
+        <p class="text-muted"></p>
       </div>
     </div>
   )
