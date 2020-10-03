@@ -17,6 +17,11 @@ const Home = () => {
 
   return (
     <div class="home">
+      <div class="header">
+        <h1>OBLIQUE STRATEGIES</h1>
+        <p class="text-muted">By Brian Eno and Peter Schmidt.</p>
+      </div>
+
       <div class={`card ${flipped ? 'flip' : 'unflip'}`} onClick={toggleFlip}>
         <div class="card-face card-front"></div>
         <div class="card-face card-back">{strategy}.</div>

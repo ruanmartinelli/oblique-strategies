@@ -1,11 +1,20 @@
 .home {
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100%;
   height: 100%;
-  padding: 0;
-  display: flex;
-  margin-top: 5em;
+  padding: 15px;
+  flex-direction: column;
+}
+
+h1{
+  letter-spacing: 1px;
+}
+
+.header{
+  margin-bottom: 3em;
+  text-align: center;
 }
 
 .card {
@@ -18,6 +27,13 @@
   transform-style: preserve-3d;
   border-radius: 10px;
 }
+
+@media (min-width: 480px) { 
+  .card{
+    height: 250px;
+    width: 420px;
+  }
+ }
 
 .card-face {
   position: absolute;
