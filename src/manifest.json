@@ -1,11 +1,11 @@
 {
-  "name": "oblique-strategies",
-  "short_name": "oblique-strategies",
+  "name": "Oblique Strategies",
+  "short_name": "Oblique Strategies",
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#fff",
-  "theme_color": "#673ab8",
+  "theme_color": "#fff",
   "icons": [
     {
       "src": "/assets/icons/android-chrome-192x192.png",
