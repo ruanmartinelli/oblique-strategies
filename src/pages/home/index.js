@@ -46,7 +46,7 @@ const Home = () => {
         <p class="text-muted">
           <a
             class="text-muted"
-            href={`https://twitter.com/intent/tweet?text="${strategy}" %23obliquestrategies&url=https://obliquestrategies.ruanmartinelli.com`}
+            href={`https://twitter.com/intent/tweet?text="${strategy}" %23obliquestrategies&url=https://oblique.ruanmartinelli.com`}
           >
             Tweet
           </a>
